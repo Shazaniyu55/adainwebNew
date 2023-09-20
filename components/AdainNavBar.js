@@ -80,7 +80,7 @@ function AdainNavBar() {
 
    {/* I made a button on Products and services here... */}
                   
-  <li className="relative text-adainblack hover:text-adainwhite">
+  <li className="relative text-sm text-adainblack hover:text-adainwhite">
     <button onClick={toggleDropdown} className="nav-link flex items-center">
       Products & Services
       <FaCaretDown className="ml-1" />
@@ -137,8 +137,8 @@ function AdainNavBar() {
                that it should listen to handle click function above 
               the parent codeblock... */}
                   
-                  <div className="text-adainblack hover:text-adainwhite  bg-adainyellow hover:bg-adainblack md:bg:hover-adainblack rounded-xl lg:m-8 p-1  w-42 shadow-md">
-    <Link href="/SignIn" className="sm:px-16 text-avista3 pr-10 mr-4 text-lg  lg:my-20" onClick={() => handleClick('checkout')}>
+                  <div className="md:text-adainblack hover:text-adainwhite  bg-adainyellow hover:bg-adainblack md:bg:hover-adainblack rounded-xl lg:m-8 p-1  w-42 shadow-md">
+    <Link href="/SignIn" className="sm:px-16 text-sm pr-2 mr-4 text-lg  lg:my-20" onClick={() => handleClick('checkout')}>
       Sign in
     </Link>
   </div>

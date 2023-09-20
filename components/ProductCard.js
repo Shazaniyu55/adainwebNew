@@ -11,7 +11,7 @@ const ProductCard = () => {
             <div className=" rounded-lg p-6 hover:scale-40 transform transition-transform duration-300">
               <div className="mb-4 relative">
               <Image src='/images/African 3.png'
-              className="rounded-lg w-full h-auto"
+              className="rounded-full w-full h-auto"
               width={200} height={100}/>
                 
                 {/* Gradient Effect */}
@@ -36,7 +36,7 @@ const ProductCard = () => {
             <div className=" rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
               <div className="mb-4 relative">
               <Image src='/images/needle 3.png'
-              className="rounded-lg w-full h-auto"
+              className="rounded-full w-full h-auto"
               width={200} height={100}/>
                 {/* Gradient Effect */}
                 <div
@@ -60,7 +60,7 @@ const ProductCard = () => {
             <div className=" rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
               <div className="mb-4 relative">
               <Image src='/images/azare 3.png'
-              className="rounded-lg w-full h-auto"
+              className="rounded-full w-full h-auto"
               width={200} height={100}/>
                 {/* Gradient Effect */}
                 <div
@@ -86,7 +86,7 @@ const ProductCard = () => {
             <div className=" rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
               <div className="mb-4 relative">
               <Image src='/images/geez.png'
-              className="rounded-lg w-full h-auto"
+              className="rounded-full w-full h-auto"
               width={200} height={100}/>
                 {/* Gradient Effect */}
                 <div

@@ -7,17 +7,17 @@ const AdainAnimatedText = () => {
     <TypeAnimation 
       sequence={[
         // Same substring at the start will only be typed out once, initially
-        'THE FUTURE IS YOU!',
+        'THE FUTURE IS YOU',
         2000, // wait 1s before replacing 
-        'THE FUTURE IS POSSIBLE!',
+        'THE FUTURE IS POSSIBLE',
         2000, // wait 2
         `THE FUTURE IS 
-        Adain!`,
+        Adain`,
         2000, // wait 2
       ]}
       wrapper="span"
       speed={20} // speed set to 20 seconds
-      className="flex items-center mt-10 pt-8 text-6xl font-extrabold mx-4 px-10 justify-center tracking-tighter  text-adainyellow"
+      className="flex items-center mt-10 pt-8 text-4xl font-extrabold mx-4 px-10 justify-center tracking-tighter  text-adainyellow"
 
       repeat={Infinity} // let the animation repeat for forever
     />

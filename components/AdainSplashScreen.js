@@ -25,7 +25,7 @@ const AdainSplashScreen = () => {
   };
 
   return (
-    <div className="flex flex-col mt-10 pt-20 items-center justify-center h-screen bg-adainblack">
+    <div className="flex flex-col mt-10 pt-20 items-center  justify-center h-96 bg-adainblack">
       {showHomepage ? (
         <Home />    // First i conditionally tell the component to render homepage 
       ) : showWelcome ? (     // Else should render the welcome screen
@@ -36,13 +36,7 @@ const AdainSplashScreen = () => {
             <span className='text-center text-2xl font-bold p-1 text-adainyellow'>AdaIn!</span>
           </p>
           
-
-          <button
-            className="flex items-center mt-4 justify-center gap-2 bg-adainyellow text-adainwhite hover:text-adainblack font-bold px-3 py-1 rounded-xl"
-            onClick={handleWelcomeDismiss}
-          >
-           Explore
-          </button>
+           {/**Explore button */}
           </div>
              // Else should show the animation first  
       ) : (

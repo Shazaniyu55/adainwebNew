@@ -4,13 +4,13 @@ import {getFirestore, collection} from 'firebase/firestore'
 
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  projectId: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MESSAGING_SENDER_ID,
-  appId: process.env.APP_ID,
-  measurementId: process.env.MEASUREMENT_ID
+  apiKey: "AIzaSyAn-EERe33d360g9ZWt8vwSghc39qV1oAc",
+  authDomain: "adainwebapp.firebaseapp.com",
+  projectId: "adainwebapp",
+  storageBucket: "adainwebapp.appspot.com",
+  messagingSenderId: "645443536568",
+  appId: "1:645443536568:web:084081b3e7c792c914564d",
+  measurementId: "G-W9LDF9V2E1"
 };
 
 // Initialize Firebase

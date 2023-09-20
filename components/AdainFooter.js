@@ -4,10 +4,10 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope } from 'reac
 const AdainFooter = () => {
   return (
     // I used the footer element of html to wrapp all three divs i needed to make the footer.
-    <footer className='relative w-full sm:h-[300px] mt-5  bg-adainfooterblack text-adainwhite'>
-      <div className='md:container mx-auto px-10 flex flex-col md:flex-row md:justify-between md:items-center items-center'>
+    <footer className=' py-10  bg-adainfooterblack text-adainwhite'>
+      <div className='md:container mx-auto px-10 flex flex-col md:flex-row md:justify-center md:items-center items-center'>
 
-      <div className="mx-8 px-10 flex flex-col space-y-4 mb-6 md:mb-0 text-center"> {/* This is the first div to wrapp the Getin Touch */}
+      <div className="mx-4 px-2 flex flex-col space-y-2 mb-6 md:mb-0 text-center"> {/* This is the first div to wrapp the Getin Touch */}
       <div className='mb-5'>
             <h1 className='text-lg font-mono font-semibold mt-10'>Social Links</h1>
             
@@ -40,15 +40,6 @@ const AdainFooter = () => {
           <p className='mx-8'>info@adain.ng</p>
         </div>
 
-        <div className="mx-8 px-10  flex my-4 flex-col  md:w-1/2 text-center"> {/* This is the second div to wrapp the Learn More */}
-          <p className='mx-8 font-bold'>Learn More</p>
-          <a className='mx-8' href="#">Home</a>
-          <a className='mx-8' href="#">Products and Services</a>
-          <a className='mx-8' href="#">Job</a>
-          <a className='mx-8' href="#">About Us</a>
-          <a className='mx-8' href="#">Blog</a>
-          <a className='mx-8' href="#">Contact</a>
-        </div>
 
 
         <div className="sm:mx-8 px-10 flex my-4 flex-col  md:w-1/2 text-center">{/* This is the third div to wrapp the Newsletter */}

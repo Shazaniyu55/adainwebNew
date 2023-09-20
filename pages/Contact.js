@@ -29,7 +29,7 @@ function Contact(){
          Email: formData.Email,
         Message: formData.Message,
         });
-        // console.log("Document written with ID: ", docRef.id);
+        console.log("Document written with ID: ", docRef.id);
         // Clear the form after submission
       setFormData({
         Fullname: '',
