@@ -83,18 +83,18 @@ function Contact(){
             </div>
 
             {/**Grid for the phone office and email svg icons */}
-            <div className='flex flex-col sm:flex-row  justify-between p-10'>
+            <div className='flex flex-col sm:flex-row  justify-between p-10 gap-10'>
                 <div className='flex justify-center items-center flex-col'>
-                <Image src='/images/Ellipse 1.svg' width={200} height={100} alt='eclipse'/>
-                <Image className='absolute -translate-y-8' src='/images/phone.svg' width={50} height={50} />
+                
+                <Image className='' src='/images/phone.svg' width={50} height={50} />
                 <h1 className='text-2xl font-monteserat'>Phone Number</h1>
                 <p className='text-2xl font-popins'>(+234) 908-260-3201</p>
 
                 </div>
 
                 <div className='flex justify-center items-center flex-col'>
-                <Image src='/images/Ellipse 1.svg' width={200} height={100} alt='eclipse'/>
-                <Image className='absolute  -translate-y-8'  src='/images/office.svg' width={50} height={50} />
+                
+                <Image className=''  src='/images/office.svg' width={50} height={50} />
                 <h1 className=' text-2xl font-monteserat'>Head office</h1>
                 <p className='text-2xl font-popins'>First floor, Sky Blue Building beside Beam clinic,
                          Along Aso B Mararaba Road, Nasarawa State</p>
@@ -104,8 +104,8 @@ function Contact(){
 
 
                 <div className='flex justify-center items-center flex-col'>
-                <Image src='/images/Ellipse 1.svg' width={200} height={100} alt='eclipse'/>
-                <Image className='absolute -translate-y-8' src='/images/email.svg' width={50} height={50} />
+                
+                <Image className='' src='/images/email.svg' width={50} height={50} />
 
                 <h1 className='text-2xl font-monteserat'>Email address</h1>
                 <p className='text-2xl font-popins'>Info@adain.ng</p>

@@ -6,6 +6,8 @@ import { FaBars, FaCaretDown } from 'react-icons/fa';
 
 
 function AdainNavBar() {
+  
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState('');
@@ -28,7 +30,7 @@ function AdainNavBar() {
 
   
   return (
-    <nav className="transition-opacity duration-500 w-full top-0 h-25 shadow-lg fixed lg:mb-8 bg-adainwhite backdrop-blur-3xl hover:bg-adainyellow opacity-100 z-50 hover:bg-avista2">
+    <nav className="transition-opacity duration-200 w-full top-0 h-25 shadow-lg fixed lg:mb-8 bg-adainwhite backdrop-blur-3xl hover:bg-adainyellow opacity-100 z-50 hover:bg-avista2">
       <motion.main 
       initial={{ opacity: 0 }} 
       animate={{ opacity: 1 }} 
@@ -36,7 +38,7 @@ function AdainNavBar() {
      
         <div className="justify-between px-4 mx-auto lg:max-w-8xl md:items-center md:flex sm:px-8">
           <div className={`mt-top-adjusted ${navbar ? 'adjust-down' : ''}`}>
-            <div className="flex text-adainblack hover:text-adainwhite items-center justify-between py-5">
+            <div className="md:flex text-adainblack hover:text-adainwhite items-center justify-between py-5">
               <a href="/" className="flex items-center">
                 <Image src="/images/adainlogo.svg" width={40} height={20} alt="Avista Beach Resort Logo" />
                 <p className='text-sm p-2 tracking-widest'>ADAIN</p>
@@ -152,7 +154,7 @@ function AdainNavBar() {
         </div>
       </motion.main>
     </nav>
-  );
+)
 }
 
 export default AdainNavBar;

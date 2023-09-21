@@ -25,7 +25,7 @@ function Home(){
             
             <div className='p-4'>
                 <div className='flex flex-col'>
-                <h1 className='text-6xl text-adainyellow font-monteserat'>AdaIn Technologies Limited</h1>
+                <h1 className='text-xl text-adainyellow font-monteserat'>AdaIn Technologies Limited</h1>
                <p className='sm:font-popins text-2xl'>Excellence and timely delivery of solutions, improvement and possibilities.</p>
 
                 </div>
@@ -45,7 +45,7 @@ function Home(){
     {/**About Adain section */}
 
         <div className='flex justify-center align-center'>
-           <h1 className='text-6xl text-center  text-adainyellow font-monteserat'>About AdaIn</h1>
+           <h1 className='text-xl text-center  text-adainyellow font-monteserat'>About AdaIn</h1>
            
            </div>
            <div className='sm:flex justify-center align-center p-10'>
@@ -57,7 +57,7 @@ function Home(){
 
             {/**Container fro our product */}
             <div className='flex justify-center items-center'>
-            <h1 className=' text-6xl text-adainyellow font-monteserat'>Our Product</h1>
+            <h1 className=' text-xl text-adainyellow font-monteserat'>Our Product</h1>
             </div>
 
             {/**Our Product */}

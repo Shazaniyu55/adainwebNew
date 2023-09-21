@@ -9,7 +9,7 @@ function About(){
     return(
         <div>
             <div className='p-4'>
-            <h1 className='text-6xl text-center  text-adainyellow font-monteserat'>About Adain</h1>
+            <h1 className='text-2xl text-center  text-adainyellow font-monteserat'>About Adain</h1>
             </div>
             {/**Image grid on about adain */}
             <div className='flex justify-center items-center'>
@@ -37,7 +37,7 @@ function About(){
             <div className='sm:grid grid-cols-3 gap-10 mt-10'>
                 {/**Our mission */}
                 <div>
-                <h1  className='text-2xl mx-8 bg-adainyellow w-40 text-white px-4 py-2 rounded'>Our mission</h1>
+                <h1  className='text-xl mx-8 bg-adainyellow w-40 text-white px-4 py-2 rounded'>Our mission</h1>
 
                 <p className='p-4 font-monteserat sm:text-2xl'>
                 To link consumers with service providers via developed
@@ -52,7 +52,7 @@ function About(){
                 {/** Our vision*/}
 
                 <div>
-                <h1  className='text-2xl mx-8 bg-adainyellow w-40 text-white px-4 py-2 rounded'>Our vision</h1>
+                <h1  className='text-xl mx-8 bg-adainyellow w-40 text-white px-4 py-2 rounded'>Our vision</h1>
 
                 <p className='p-4 font-monteserat sm:text-2xl'>
                 To be the most preferred technological based company in Nigeria and 
@@ -86,7 +86,7 @@ function About(){
             </div>
                 {/**People technology solutions */}
             <div className='flex justify-center items-center mt-10'>
-                <h1 className='text-4xl text-adainyellow font-monteserat'>People Technology Posibilities</h1>
+                <h1 className='text-xl text-adainyellow font-monteserat'>People Technology Posibilities</h1>
             </div>
             {/**Adain write up */}
             <div className='flex justify-center items-center p-4'>
@@ -104,7 +104,7 @@ With a team of experienced professionals working round the clock, we are optimis
 
         {/**Meet our team */}
         <div className='flex justify-center items-center m-10'>
-            <h1 className='text-6xl text-adainyellow font-monteserat translate-y-10'>Meet Our Team</h1>
+            <h1 className='text-xl text-adainyellow font-monteserat translate-y-10'>Meet Our Team</h1>
         </div>
 
             <TeamCard />
@@ -113,7 +113,7 @@ With a team of experienced professionals working round the clock, we are optimis
 
             {/**Our Product */}
             <div className='flex justify-center items-center'>
-            <h1 className=' text-6xl text-adainyellow font-monteserat'>Our Product</h1>
+            <h1 className=' text-2xl text-adainyellow font-monteserat'>Our Product</h1>
             </div>
 
             {/**Our Product */}
