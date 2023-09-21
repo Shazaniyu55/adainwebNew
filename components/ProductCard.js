@@ -32,28 +32,7 @@ const ProductCard = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-            <div className=" rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
-              <div className="mb-4 relative">
-              <Image src='/images/needle 3.png'
-              className="rounded-full w-full h-auto"
-              width={200} height={100}/>
-                {/* Gradient Effect */}
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)',
-                  }}
-                ></div>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Needle</h3>
-              <p className="text-gray-600 mb-4">
-                No matter what path you take to sell your home, we can help you navigate a successful sale.
-              </p>
-              <a href="https://adain.ng/productaservices/" className="text-adainwhite hover:text-estatelinkwhite font-bold px-3 py-1 rounded-xl bg-adainblack hover:bg-adainyellow">Know More</a>
-
-            </div>
-          </div>
+          
 
           {/* Card 3 */}
           <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">

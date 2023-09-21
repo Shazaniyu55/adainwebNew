@@ -52,26 +52,7 @@ const TeamCard = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-            <div className="bg-adainyellow rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
-              <div className="mb-4 relative">
-              <Image src='/images/Rectangle 25.png'
-              className="rounded-lg w-full h-auto"
-              width={200} height={100}/>
-                {/* Gradient Effect */}
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)',
-                  }}
-                ></div>
-              </div>
-              <h3 className="text-xl font-Montserrat font-semibold mb-4">Adebayo Disu</h3>
-              <p className="text-2xl font-Montserrat mb-4">
-              Digital Marketing Manager
-              </p>
-            </div>
-          </div>
+         
         </div>
       </div>
     </div>
