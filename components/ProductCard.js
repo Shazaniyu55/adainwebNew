@@ -17,9 +17,7 @@ const ProductCard = () => {
                 {/* Gradient Effect */}
                 <div
                   className="absolute inset-0"
-                  style={{
-                    background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)',
-                  }}
+                
                 ></div>
               </div>
               <h3 className="text-xl font-semibold mb-4">Quickmed</h3>
@@ -44,9 +42,7 @@ const ProductCard = () => {
                 {/* Gradient Effect */}
                 <div
                   className="absolute inset-0"
-                  style={{
-                    background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)',
-                  }}
+      
                 ></div>
               </div>
               <h3 className="text-xl font-semibold mb-4">Azare</h3>
@@ -70,9 +66,7 @@ const ProductCard = () => {
                 {/* Gradient Effect */}
                 <div
                   className="absolute inset-0"
-                  style={{
-                    background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)',
-                  }}
+                 
                 > </div>
               </div>
               <h3 className="text-xl font-semibold mb-4">Geez</h3>
