@@ -87,16 +87,16 @@ function Contact(){
                 <div className='flex justify-center items-center flex-col'>
                 
                 <Image className='' src='/images/phone.svg' width={50} height={50} />
-                <h1 className='text-2xl font-monteserat'>Phone Number</h1>
-                <p className='text-2xl font-popins'>(+234) 908-260-3201</p>
+                <h1 className='text-sm font-monteserat'>Phone Number</h1>
+                <p className='text-sm font-popins'>(+234) 908-260-3201</p>
 
                 </div>
 
                 <div className='flex justify-center items-center flex-col'>
                 
                 <Image className=''  src='/images/office.svg' width={50} height={50} />
-                <h1 className=' text-2xl font-monteserat'>Head office</h1>
-                <p className='text-2xl font-popins'>First floor, Sky Blue Building beside Beam clinic,
+                <h1 className=' text-sm font-monteserat'>Head office</h1>
+                <p className='text-sm font-popins'>First floor, Sky Blue Building beside Beam clinic,
                          Along Aso B Mararaba Road, Nasarawa State</p>
 
 
@@ -107,8 +107,8 @@ function Contact(){
                 
                 <Image className='' src='/images/email.svg' width={50} height={50} />
 
-                <h1 className='text-2xl font-monteserat'>Email address</h1>
-                <p className='text-2xl font-popins'>Info@adain.ng</p>
+                <h1 className='text-sm font-monteserat'>Email address</h1>
+                <p className='text-sm font-popins'>Info@adain.ng</p>
 
 
                 </div>
@@ -121,7 +121,7 @@ function Contact(){
             <div className='flex justify-center items-center mt-10'>
 
             <div className="w-full max-w-xl">
-            <h1 className='text-center text-4xl text-adainyellow font-monteserat'>Send us a message</h1>
+            <h1 className='text-center text-sm text-adainyellow font-monteserat'>Send us a message</h1>
 
       {/**Form */}
         <form onSubmit={Submit} method='post'className="bg-white shadow-xl rounded px-8 pt-6 pb-8 mb-4">

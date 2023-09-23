@@ -1,13 +1,11 @@
+
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaBars, FaCaretDown } from 'react-icons/fa';
 
-
 function AdainNavBar() {
-  
-
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState('');
@@ -38,12 +36,12 @@ function AdainNavBar() {
      
         <div className="justify-between px-4 mx-auto lg:max-w-8xl md:items-center md:flex sm:px-8">
           <div className={`mt-top-adjusted ${navbar ? 'adjust-down' : ''}`}>
-            <div className="md:flex text-adainblack hover:text-adainwhite items-center justify-between py-5">
+            <div className="flex text-adainblack hover:text-estatelinkwhite items-center justify-between py-5">
               <a href="/" className="flex items-center">
-                <Image src="/images/adainlogo.svg" width={40} height={20} alt="Avista Beach Resort Logo" />
-                <p className='text-sm p-2 tracking-widest'>ADAIN</p>
+              <Image src="/images/adainlogo.svg" width={40} height={20} alt="Avista Beach Resort Logo" /> 
+              <p className='text-sm p-2 text-adainblack font-bold tracking-widest'>Adain</p>
               </a>
-              <div className="md:hidden text-adainblack hover:text-adainwhite">
+              <div className="md:hidden text-adainblack hover:text-estatelinkwhite">
                 <button className="text-adainblack hover:text-adainwhite pt-2 rounded-md" onClick={handleClick}>
                   {navbar ? (
                     <svg className="text-adainblack hover:text-adainwhite icon icon-tabler icon-tabler-letter-x" fill="none" height="24" stroke="currentColor" 
@@ -55,7 +53,7 @@ function AdainNavBar() {
                     </svg>
                     
                   ) : (
-                    <div className='text-adainblack hover:text-adainwhite'>
+                    <div className='text-adainblack hover:text-estatelinkwhite'>
                     <svg width="21" height="8" viewBox="0 0 21 8" fill="none" 
                      xmlns="http://www.w3.org/2000/svg">
                     <rect width="21" height="2" fill="#1B1919"/>
@@ -70,10 +68,11 @@ function AdainNavBar() {
             </div>
           </div>
           <div>
-            <div className={`text-adainblack hover:text-adainwhite flex-2 justify-self-center pl-2 ... tracking-tight pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}>
-              <div className="space-x-4 text-lg">
+          <div className={` text-adainblack hover:text-adainwhite flex-2 justify-self-center pl-2 ... tracking-tight pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}>
+              <div className=" space-x-4 text-lg">
                 
-              <ul className="mb-4 mt-2 items-center pr-20 font-medium text-sm... justify-center space-y-4 md:flex md:space-x-4 md:space-y-0">
+  
+  <ul className="md:px-20 mb-4 mt-2 items-center pr-20 font-medium text-sm... justify-center space-y-4 md:flex md:space-x-4 md:space-y-0">
   <li className={`text-adainblack hover:text-adainwhite pr-16 ${activeNavItem === 'home' ? 'active' : ''}`}>
     <Link href="/" onClick={() => handleClick('home')}>
       {`Home`}
@@ -140,8 +139,8 @@ function AdainNavBar() {
               the parent codeblock... */}
                   
                   <div className="md:text-adainblack hover:text-adainwhite  bg-adainyellow hover:bg-adainblack md:bg:hover-adainblack rounded-xl lg:m-8 p-1  w-42 shadow-md">
-    <Link href="/SignIn" className="sm:px-16 text-sm pr-2 mr-4 text-lg  lg:my-20" onClick={() => handleClick('checkout')}>
-      Sign in
+    <Link href="/SignIn" className="sm:px-10 text-sm pr-2 mr-4 text-lg  lg:my-20" onClick={() => handleClick('checkout')}>
+      Signin
     </Link>
   </div>
     
@@ -154,7 +153,7 @@ function AdainNavBar() {
         </div>
       </motion.main>
     </nav>
-)
+  );
 }
 
 export default AdainNavBar;
