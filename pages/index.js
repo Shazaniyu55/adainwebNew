@@ -14,6 +14,8 @@ function Home(){
           <link rel="Adain Logo" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet"/>
         </Head>
 
