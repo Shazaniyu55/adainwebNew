@@ -39,7 +39,7 @@ function About(){
                 <div>
                 <h1  className='text-xl mx-8 bg-adainyellow w-40 text-white px-4 py-2 rounded'>Our mission</h1>
 
-                <p className='p-4 font-monteserat sm:text-2xl'>
+                <p className='p-4 font-monteserat sm:text-2xl text-left'>
                 To link consumers with service providers via developed
                  content based products that service the global ICT sphere.
 
@@ -54,7 +54,7 @@ function About(){
                 <div>
                 <h1  className='text-xl mx-8 bg-adainyellow w-40 text-white px-4 py-2 rounded'>Our vision</h1>
 
-                <p className='p-4 font-monteserat sm:text-2xl'>
+                <p className='p-4 font-monteserat sm:text-2xl text-left'>
                 To be the most preferred technological based company in Nigeria and 
                 beyond that provide the right kind of products, provide the right kind of services 
                 with boundless possibilities of adding value positively to humanity.
@@ -90,7 +90,7 @@ function About(){
             </div>
             {/**Adain write up */}
             <div className='flex justify-center items-center p-4'>
-                <p className='text-center font-monteserat sm:text-2xl'>
+                <p className='text-center font-monteserat sm:text-2xl text-left'>
                 Technology has emerged and its speeding up. No doubt, it has influenced the way we live, interact and function generally. As it evolves, we can’t afford to be left behind. It is on this premise that ADAIN TECHNOLOGIES LIMITED was conceived and birthed.
 
 ADAIN TECHNOLOGIES LIMITED is a privately owned company charged with the need to add value to humanity positively by answering the challenges in the ICT world and other technological advancement in general.
@@ -120,7 +120,7 @@ With a team of experienced professionals working round the clock, we are optimis
             <ProductCard />
 
            
-        
+            <div class="elfsight-app-597fb779-735d-41ae-a417-35c199b9ebc6"></div>
 
            
             

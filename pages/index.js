@@ -51,8 +51,8 @@ function Home(){
            
            </div>
            <div className='sm:flex justify-center align-center p-10'>
-            <p className='sm:text-2xl font-popins text-center'>We are optimistic about developing  world class solution based products and provide <br/>services to meet the ever increasing demand resulting to growth,
-                 technological improvement <br/>and business expansion in various spheres of human advancement.</p>
+            <p className='sm:text-2xl font-popins  text-left'>We are optimistic about developing  world class solution based products and provide services to meet the ever increasing demand resulting to growth,
+                 technological improvement and business expansion in various spheres of human advancement.</p>
            </div>
 
 
