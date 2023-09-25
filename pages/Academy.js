@@ -1,18 +1,21 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-
+import AcademyCard from '../components/AcademyCard'
 
 function Academy(){
     return(
       <div>
+        <AcademyCard />
         <div className='flex justify-center items-center'>
         
         <div className='bg-adainhite shadow-xl w-full rounded px-8 pt-6 pb-8 mb-4'>
-          <div className='flex justify-center gap-10'>
+       {/**Logo of academy */}
+             <div className='flex justify-center gap-10 mt-10'>
           
-          <Image src='/images/adainlogo.svg' alt='logo' width={60} height={60}/>
+          <Image src='/images/HACKED8 logo2.JPG' alt='logo' width={100} height={100}/>
 
           </div>
+          {/**Name of academy */}
           <div className='flex justify-center'>
           <h1>HACKED8 by Adain Technology</h1>
 
