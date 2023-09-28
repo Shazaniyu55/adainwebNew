@@ -1,6 +1,6 @@
 import {initializeApp} from 'firebase/app'
 import {getFirestore, collection} from 'firebase/firestore'
-import {getMessaging} from 'firebase/messaging'
+
 
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
@@ -14,7 +14,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
-export const messagings = getMessaging(app)
 export const db = getFirestore(app)
 
 
