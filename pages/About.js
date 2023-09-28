@@ -14,12 +14,12 @@ function About(){
             {/**Image grid on about adain */}
             <div className='flex justify-center items-center'>
                 <div className='flex flex-col sm:flex-row justify-center '>
-                    <div className='flex justify-center items-center flex-col mt-20'>
+                    <div className='flex justify-center items-center flex-col mt-4'>
 
                     <Image src='/images/Rectangle 23.png' width={300} height={100}/>
                     </div>
 
-                    <div className='flex justify-center items-center flex-col mt-20'>
+                    <div className='flex justify-center items-center flex-col mt-4'>
 
                     <Image src='/images/Rectangle 26.png' width={300} height={100}/>
                     </div>

@@ -22,7 +22,7 @@ function Home(){
            
             {/** container for introduction */}
             <div className=''>
-              <NightMode/>
+              
             </div>
             
             <div className='p-4'>
