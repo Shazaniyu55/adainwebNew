@@ -21,7 +21,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "redux/cartSlice.js"  ],
   "exclude": [
     "node_modules"
   ]
