@@ -133,7 +133,7 @@ function Academy(){
       
     </div>
     <div className="w-full md:w-1/2 px-3">
-      <label className=" tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+      <label className=" tracking-wide text-gray-900 font-semibold mb-4" for="grid-last-name">
         Contact Address
       </label>
       <input 
