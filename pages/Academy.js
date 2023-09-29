@@ -20,27 +20,27 @@ function Academy(){
     course:""
 
   })
-  const [fetchedData, setFetchedData] = useState([]); // State to hold fetched data
-  const [errorMessage, setErrormessage] = useState({
-    ParentName: "",
-    contact: "",
-    telephone: " ",
-    studentFullName: "",
-    studentPhone: " ",
-    academyLevel: "",
-    ageRange:"",
-    country:"",
-    state:"",
-    courseLeve:"",
-    course:""
-  })
+  // const [fetchedData, setFetchedData] = useState([]); // State to hold fetched data
+  // const [errorMessage, setErrormessage] = useState({
+  //   ParentName: "",
+  //   contact: "",
+  //   telephone: " ",
+  //   studentFullName: "",
+  //   studentPhone: " ",
+  //   academyLevel: "",
+  //   ageRange:"",
+  //   country:"",
+  //   state:"",
+  //   courseLeve:"",
+  //   course:""
+  // })
   
   const Submit = async(e)=>{
     e.preventDefault()
 
     
     try {
-      const docRef = await addDoc(collection(db, "Academy"), {
+      const docRef = await addDoc(collection(db, "academy"), {
         ParentName: formData.ParentName,
         contact: formData.contact,
         telephone: formData.telephone,
@@ -113,6 +113,7 @@ function Academy(){
           </div>
 
           <div className='flex justify-center items-center mt-10'>
+            
           <form method='post' onSubmit={Submit}>
           
   <div className="flex flex-wrap -mx-3 mb-6">
