@@ -1,7 +1,98 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import AcademyCard from '../components/AcademyCard'
+import {collection, addDoc} from 'firebase/firestore'
+import {db} from '../firebase'
+
+
 function Academy(){
+  const[formData, setFormData] = useState({
+    ParentName: "",
+    contact: "",
+    telephone: " ",
+    studentFullName: "",
+    studentPhone: "",
+    academyLevel: "",
+    ageRange: "",
+    country: "",
+    state:"",
+    courseLeve: "",
+    course:""
+
+  })
+  const [fetchedData, setFetchedData] = useState([]); // State to hold fetched data
+  const [errorMessage, setErrormessage] = useState({
+    ParentName: "",
+    contact: "",
+    telephone: " ",
+    studentFullName: "",
+    studentPhone: " ",
+    academyLevel: "",
+    ageRange:"",
+    country:"",
+    state:"",
+    courseLeve:"",
+    course:""
+  })
+  
+  const Submit = async(e)=>{
+    e.preventDefault()
+
+    
+    try {
+      const docRef = await addDoc(collection(db, "Academy"), {
+        ParentName: formData.ParentName,
+        contact: formData.contact,
+        telephone: formData.telephone,
+        studentFullName: formData.studentFullName,
+        studentPhone: formData.studentPhone,
+        academyLevel: formData.academyLevel,
+        ageRange: formData.ageRange,
+        country: formData.country,
+        state: formData.state,
+        courseLeve: formData.courseLeve,
+        course: formData.course
+
+      });
+      console.log("Document written with ID: ", docRef.id);
+      // Clear the form after submission
+    setFormData({
+      ParentName: '',
+      contact: '',
+      telephone: '',
+      studentFullName: '',
+      studentPhone: '',
+      academyLevel: '',
+      ageRange: '',
+      country: '',
+      state: '',
+      courseLeve: '',
+      course: ''
+    });
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+
+
+   }
+
+   const handleInputChange = (e)=>{
+    const {name, value} = e.target
+    setFormData({...formData, [name]: value})
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
 
     return(
       <div>
@@ -22,58 +113,98 @@ function Academy(){
           </div>
 
           <div className='flex justify-center items-center mt-10'>
-          <form>
+          <form method='post' onSubmit={Submit}>
           
   <div className="flex flex-wrap -mx-3 mb-6">
   
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
     
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-        Parent fullName
+      <label className=" tracking-wide text-gray-900 font-semibold mb-4" for="grid-first-name">
+        Parent's Fullname
       </label>
-      <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="grid-first-name" type="text" placeholder="parent fullname"/>
+      <input 
+      className="mt-4 shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+      id="grid-first-name" 
+      type="text" 
+      defaultValue={formData.ParentName}
+      onChange={handleInputChange}
+      name='ParentName'
+      placeholder="parent fullname"/>
       
     </div>
     <div className="w-full md:w-1/2 px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+      <label className=" tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
         Contact Address
       </label>
-      <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="grid-last-name" type="text" placeholder="Contact address"/>
+      <input 
+      className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
+      id="grid-last-name" 
+      defaultValue={formData.contact}
+      onChange={handleInputChange}
+      type="text" 
+      name='contact'
+      placeholder="Contact address"/>
     </div>
   </div>
   <div className="mb-6">
-<label className="block text-gray-700 text-sm font-bold mb-2" for="password">
-Telephone
+<label className=" tracking-wide text-gray-900  font-semibold mb-4" for="password">
+Parent's Phone No
 </label>
-<input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="text" placeholder="telephone"/>
+<input 
+className="mt-4 shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
+id="password" 
+defaultValue={formData.telephone}
+onChange={handleInputChange}
+type="text" 
+name='telephone'
+placeholder="telephone"/>
 
 </div>
 
   <div className="flex flex-wrap -mx-3 mb-6">
     <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-        Student FullName
+      <label className=" tracking-wide text-gray-900 font-semibold mb-4" for="grid-password">
+        Student's Fullname
       </label>
-      <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="grid-password" type="text" placeholder="student fullname"/>
+      <input 
+      className="mt-4 shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
+      id="grid-password" 
+      type="text" 
+      defaultValue={formData.studentFullName}
+      onChange={handleInputChange}
+      name='studentFullName'
+      placeholder="student fullname"/>
     </div>
   </div>
 
   <div className="flex flex-wrap -mx-3 mb-6">
     <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-       Student Phone
+      <label className=" tracking-wide text-gray-900  font-semibold mb-4" for="grid-password">
+       Student's Phone No
       </label>
-      <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="grid-password" type="text" placeholder="student phone"/>
+      <input 
+      className="mt-4 shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
+      id="grid-password" 
+      type="text" 
+      defaultValue={formData.studentPhone}
+      onChange={handleInputChange}
+      name='studentPhone'
+      placeholder="student phone"/>
       
     </div>
   </div>
       {/**Highest Academy Level */}
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+      <label className="tracking-wide text-gray-900 font-semibold mb-4" for="grid-password">
        Highest Academy Level
       </label>
-  <div class="relative border border-gray-300 text-gray-800 bg-white shadow-lg">
+  <div class="mt-4 relative border border-gray-300 text-gray-800 bg-white shadow-lg">
   
-    <select class="appearance-none w-full py-1 px-2 bg-white" name="whatever" id="frm-whatever">
+    <select 
+    class="appearance-none w-full py-1 px-2 bg-white"
+     name="academyLevel"
+     defaultValue={formData.academyLevel}
+     onChange={handleInputChange}
+      id="academyLevel">
         <option value="">select highest academy level &hellip;</option>
       <option value="none">None</option>
       <option value="Bsc">BSC</option>
@@ -92,12 +223,16 @@ Telephone
     </div>
 </div>
 {/**select age range */}
-<label className="mt-10 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+<h1 className="mt-10  tracking-wide text-gray-900  font-semibold mb-4" for="grid-password">
       Age Range
-      </label>
+      </h1>
   <div class="relative border border-gray-300 text-gray-800 bg-white shadow-lg">
   
-    <select class="appearance-none w-full py-1 px-2 bg-white" name="whatever" id="frm-whatever">
+    <select 
+    defaultValue={formData.ageRange}
+    onChange={handleInputChange}
+    class="appearance-none w-full py-1 px-2 bg-white" 
+    name="ageRange" id="ageRange">
         <option value="">select your age range &hellip;</option>
       <option value="18-24">18-24</option>
       <option value="25-29">25-29</option>
@@ -119,14 +254,16 @@ Telephone
   
   <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
   
-    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+    <label className="tracking-wide text-gray-900  font-semibold mb-4" for="grid-first-name">
       Country
     </label>
     <select 
       
-      className="text-adainblack w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" 
+      className="mt-4 text-adainblack w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" 
       id="country"
-      name="Country">
+      defaultValue={formData.country}
+      onChange={handleInputChange}
+      name="country">
     <option>select country</option>
     <option  value="AF">Afghanistan</option>
     <option value="AX">Aland Islands</option>
@@ -384,13 +521,14 @@ Telephone
     
   </div>
   <div className="w-full md:w-1/2 px-3">
-    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+    <label className=" tracking-wide text-gray-900  font-semibold mb-4" for="grid-last-name">
       State
     </label>
     <select
-
-className="text-adainblack w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="State">
-    <option value="">Select state</option>
+  defaultValue={formData.state}
+  onChange={handleInputChange}
+  className="mt-4 text-adainblack w-full bg-gray-200 text-gray-900 border border-red-500 rounded py-3 px-4 mb-4 leading-tight focus:outline-none focus:bg-white" name="state">
+    <option >Select state</option>
     <option value="Abia">Abia State</option>
     <option value="Adamawa">Adamawa State</option>
     <option value="Akwa Ibom">Akwa Ibom State</option>
@@ -432,18 +570,24 @@ className="text-adainblack w-full bg-gray-200 text-gray-700 border border-red-50
 </div>
 {/**radio button */}
 
-<h3 className="mb-4 font-semibold text-gray-900 dark:text-white">Course leve</h3>
+<h3 className="mb-4 font-semibold text-gray-900 dark:text-white">Course Level</h3>
 <ul className="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
     <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
         <div className="flex items-center pl-3">
-            <input id="horizontal-list-radio-license" type="radio" value="" name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+            <input
+            defaultValue={formData.courseLeve}
+            onChange={handleInputChange}
+            id="horizontal-list-radio-license" type="radio" value="Diploma" name="courseLeve" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
             <label for="horizontal-list-radio-license" className="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Diploma(Beginner to Advance) </label>
             
         </div>
     </li>
     <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
         <div className="flex items-center pl-3">
-            <input id="horizontal-list-radio-id" type="radio" value="" name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+            <input id="horizontal-list-radio-id"
+            defaultValue={formData.courseLeve}
+            onChange={handleInputChange}
+            type="radio" value="entryLevel" name="courseLeve" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
             <label for="horizontal-list-radio-id" className="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Entry Level(Beginner)</label>
         </div>
     </li>
@@ -452,13 +596,16 @@ className="text-adainblack w-full bg-gray-200 text-gray-700 border border-red-50
 </ul>
 
 {/**select course of intrest */}
-<label className="mt-10 block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+<h1 className="mt-10 tracking-wide text-gray-900  font-semibold mb-4" for="grid-password">
       Select Course of interest
-      </label>
-  <div class="relative border border-gray-300 text-gray-800 bg-white shadow-lg">
+      </h1>
+  <div class="mt-4 relative border border-gray-300 text-gray-800 bg-white shadow-lg">
   
-    <select class="appearance-none w-full py-1 px-2 bg-white" name="whatever" id="frm-whatever">
-        <option value="">   Select Course of interest &hellip;</option>
+    <select
+    defaultValue={formData.course}
+    onChange={handleInputChange}
+    class="appearance-none text-gray-900 font-semibold w-full py-1 px-2 bg-white" name="course" id="course">
+        <option > Select Course of interest &hellip;</option>
       <option value="UI/UX">UI/UX</option>
       <option value="Front End">FrontEnd</option>
       <option value="Backend">BackEnd</option>

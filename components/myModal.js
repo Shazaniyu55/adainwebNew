@@ -44,7 +44,7 @@ const MyModal = ({isVisible, onClose})=>{
     })
     const Submit = async(e)=>{
       e.preventDefault()
-      if(ValidateForm()){
+      if(ValidateForm){
         console.log('form submited', formData)
 
       }
@@ -87,6 +87,7 @@ const MyModal = ({isVisible, onClose})=>{
      const handleInputChange = (e)=>{
       const {name, value} = e.target
       setFormData({...formData, [name]: value})
+    
 
 
     }
