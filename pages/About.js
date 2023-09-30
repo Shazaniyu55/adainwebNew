@@ -16,12 +16,12 @@ function About(){
                 <div className='flex flex-col sm:flex-row justify-center '>
                     <div className='flex justify-center items-center flex-col mt-4'>
 
-                    <Image src='/images/Rectangle 23.png' width={300} height={100}/>
+                    <Image src='/images/Rectangle 23.png' alt='rectangle 1' width={300} height={100}/>
                     </div>
 
                     <div className='flex justify-center items-center flex-col mt-4'>
 
-                    <Image src='/images/Rectangle 26.png' width={300} height={100}/>
+                    <Image src='/images/Rectangle 26.png' alt='rectangle 2' width={300} height={100}/>
                     </div>
                    
                     

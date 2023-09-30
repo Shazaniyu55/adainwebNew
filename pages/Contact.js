@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import React, { Fragment } from 'react'
 import Image from 'next/image';
 import {collection, addDoc} from 'firebase/firestore'
 import { db } from '../firebase';
+
 
 function Contact(){
   const [formData, setFormData] = useState({
@@ -10,6 +12,8 @@ function Contact(){
     Message: " "
   })
   const [fetchedData, setFetchedData] = useState([]); // State to hold fetched data
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
   const [errorMessage, setErrormessage] = useState({
     Fullname: "",
     Email: "",
@@ -18,13 +22,16 @@ function Contact(){
   
   
     const Submit = async(e)=>{
+     
+  
       e.preventDefault()
       if(ValidateForm()){
         // console.log('form submited', formData)
 
       }
       try {
-        const docRef = await addDoc(collection(db, "contact"), {
+
+         await addDoc(collection(db, "contact"), {
           Fullname: formData.Fullname,
          Email: formData.Email,
         Message: formData.Message,
@@ -39,6 +46,13 @@ function Contact(){
       } catch (e) {
         console.error("Error adding document: ", e);
       }
+
+      setIsSubmitted(true);
+
+      // You can optionally reset the success message after a delay if needed
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 3000); // Reset the message after 3 seconds
 
 
     }
@@ -76,7 +90,9 @@ function Contact(){
     
   
     return(
-        <div>
+      
+        
+          <Fragment>
             <div className='flex justify-center items-center mt-10'>
             <h1 className='text-4xl text-adainyellow font-monteserat '>Stay In Touch With Us</h1>
 
@@ -172,7 +188,8 @@ function Contact(){
       <button className="mx-8 bg-adainyellow text-white px-4 py-2 rounded font-popins" type="submit">
         Submit
       </button>
-      
+
+      {isSubmitted && <p>Form submitted</p>}
 
       
     </div>
@@ -184,9 +201,9 @@ function Contact(){
 
             </div>
             <div class="elfsight-app-597fb779-735d-41ae-a417-35c199b9ebc6"></div>
+            </Fragment>
 
-
-        </div>
+        
         
     )
 

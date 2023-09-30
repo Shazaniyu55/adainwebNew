@@ -12,6 +12,7 @@ const TeamCard = () => {
               <div className="mb-4 relative">
               <Image src='/images/Rectangle 20.png'
               className="rounded-lg w-full h-auto"
+              alt='rectangle'
               width={200} height={100}/>
                 
                 {/* Gradient Effect */}
@@ -34,6 +35,7 @@ const TeamCard = () => {
             <div className="bg-adainyellow rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
               <div className="mb-4 relative">
               <Image src='/images/Rectangle 24.png'
+              alt='rectangle'
               className="rounded-lg w-full h-auto"
               width={200} height={100}/>
                 {/* Gradient Effect */}

@@ -4,7 +4,7 @@ import Image from 'next/image';
 const AcademyCard = () => {
   return (
     <div className="bg-adainyellow text-estatelinkwhite py-12">
-        <h1 className='text-center text-4xl font-bold m-4'> Academy Framework for AdaIn Academy</h1>
+        <h1 className='text-center text-4xl font-bold m-4'>  AdaIn Academy</h1>
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-center">
             
@@ -14,6 +14,7 @@ const AcademyCard = () => {
             <div className=" rounded-lg p-6 hover:scale-40 transform transition-transform duration-300">
               <div className="mb-4 relative">
               <Image src='/images/robotics.jpg'
+              alt='academy'
               className="rounded-lg w-full h-auto"
               width={200} height={100}/>
                 
@@ -37,6 +38,7 @@ const AcademyCard = () => {
             <div className=" rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
               <div className="mb-4 relative">
               <Image src='/images/robotics2.jpg'
+              alt='academy'
               className="rounded-lg w-full h-auto"
               width={200} height={50}/>
                 {/* Gradient Effect */}
@@ -60,6 +62,7 @@ const AcademyCard = () => {
               <div className="mb-4 relative">
               <Image src='/images/robotics3.jpg'
               className="rounded-lg w-full h-auto"
+              alt='academy'
               width={200} height={100}/>
                 {/* Gradient Effect */}
                 <div

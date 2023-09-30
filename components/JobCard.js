@@ -14,6 +14,7 @@ const JobCard = () => {
             <div className=" rounded-lg p-6 hover:scale-40 transform transition-transform duration-300">
               <div className="mb-4 relative">
               <Image src='/images/team1.jfif'
+              alt='team'
               className="rounded-lg w-full h-auto"
               width={200} height={100}/>
                 
@@ -40,6 +41,7 @@ const JobCard = () => {
               <div className="mb-4 relative">
               <Image src='/images/team2.jfif'
               className="rounded-lg w-full h-auto"
+              alt='team'
               width={200} height={100}/>
                 {/* Gradient Effect */}
                 <div
@@ -63,6 +65,7 @@ const JobCard = () => {
               <div className="mb-4 relative">
               <Image src='/images/team3.jfif'
               className="rounded-lg w-full h-auto"
+              alt='team'
               width={200} height={100}/>
                 {/* Gradient Effect */}
                 <div
@@ -86,6 +89,7 @@ const JobCard = () => {
               <div className="mb-4 relative">
               <Image src='/images/team4.jfif'
               className="rounded-lg w-full h-auto"
+              alt='team'
               width={200} height={100}/>
                 {/* Gradient Effect */}
                 <div
