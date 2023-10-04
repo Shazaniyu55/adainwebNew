@@ -27,6 +27,7 @@ function Home(){
             </div>
             <NightMode />
             
+            
             <div className='p-4'>
                 <div className='flex flex-col'>
                 <h1 className='text-xl text-adainyellow font-monteserat'>AdaIn Technologies Limited</h1>

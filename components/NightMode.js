@@ -22,7 +22,7 @@ function NightMode(){
         <div className="flex justify-center">
           {currentTheme === 'dark' ? (
             <button
-              className="bg-black-700 hover:bg-black  rounded-md border-purple-400 border-2 p-4"
+              className="bg-black-700 hover:bg-black  rounded-3xl p-2 outline-4 backdrop-opacity-35 shadow-lg"
               onClick={() => setTheme('light')}
             >
               {' '}
@@ -30,7 +30,7 @@ function NightMode(){
             </button>
           ) : (
             <button
-              className="bg-gray-100 rounded-md border-purple-400 border-2 p-4 hover:bg-gray-300"
+              className="bg-gray-100  rounded-3xl p-2 outline-4 backdrop-opacity-35 shadow-lg"
               onClick={() => setTheme('dark')}
             >
               <FaMoon className='text-orange-600 text-lg' />
