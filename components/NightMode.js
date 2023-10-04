@@ -1,5 +1,6 @@
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
+import {FaMoon, FaSun} from 'react-icons/fa'
 import Image from 'next/image';
 
 
@@ -15,27 +16,24 @@ function NightMode(){
 
 
     return(
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-10">
       <div>
-        <h1>
-          {currentTheme === 'dark' ? 'Dark' : 'Light'}{' '}
-          <span>Mode</span>
-          </h1>
+       
         <div className="flex justify-center">
           {currentTheme === 'dark' ? (
             <button
-              className="bg-black-700 hover:bg-black w-10 rounded-md border-purple-400 border-2 p-4"
+              className="bg-black-700 hover:bg-black  rounded-md border-purple-400 border-2 p-4"
               onClick={() => setTheme('light')}
             >
               {' '}
-              <Image src="/images/sun.svg" alt="logo" height={30} width={70} />
+              <FaSun className='text-green-500 text-lg' />
             </button>
           ) : (
             <button
-              className="bg-gray-100 w-10 rounded-md border-purple-400 border-2 p-4 hover:bg-gray-300"
+              className="bg-gray-100 rounded-md border-purple-400 border-2 p-4 hover:bg-gray-300"
               onClick={() => setTheme('dark')}
             >
-              <Image src="/images/moon.svg" alt="logo" height={30} width={70} />
+              <FaMoon className='text-orange-600 text-lg' />
             </button>
           )}
         </div>

@@ -5,11 +5,12 @@ import Layouts from '../components/Layouts';
 import AdainSplashScreen from '../components/AdainSplashScreen';
 import { ThemeProvider } from 'next-themes';
 import AdainSpaceBackground from '../components/AdainSpaceBackground';
-
+import { Provider } from 'react-redux';
+import Store from '../store/store';
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
-     
+    <div className='dark:bg-black bg-purple-800 text-white'>
+     <Provider store={Store}>
       <AdainSplashScreen />
       
       <Layouts showNavbarAndFooter={true}>
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }) {
         </ThemeProvider>
        
       </Layouts>
+      </Provider>
       
 
       

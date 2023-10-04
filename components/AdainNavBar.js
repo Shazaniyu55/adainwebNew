@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaBars, FaCaretDown } from 'react-icons/fa';
+import NiyuThemeSwitch from './themeSwitcher';
 
 function AdainNavBar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -83,7 +84,7 @@ function AdainNavBar() {
                   
   <li className="relative text-sm text-adainblack hover:text-adainwhite">
     <button onClick={toggleDropdown} className="nav-link flex items-center">
-      Products & Services
+      Products
       <FaCaretDown className="ml-1" />
     </button>
 
@@ -112,7 +113,7 @@ function AdainNavBar() {
                   
                   <li className={`text-adainblack hover:text-adainwhite ${activeNavItem === 'about' ? 'active' : ''}`}>
                     <Link href="/About" onClick={() => handleClick('about')}>
-                      About Us
+                      About
                     </Link>
                   </li>
                   <li className={`text-adainblack hover:text-adainwhite ${activeNavItem === 'experiences' ? 'active' : ''}`}>
@@ -131,6 +132,10 @@ function AdainNavBar() {
                     Contact
                     </Link>
                   </li>
+
+                 
+
+                  
 
           
                   
