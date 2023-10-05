@@ -232,7 +232,7 @@ function Academy(){
                  <form onSubmit={Submit} method='post'className="bg-white shadow-xl rounded px-8 pt-6 pb-8 mb-4">
        <div className="mb-4">
        <label className="block text-gray-700 text-sm font-bold mb-2" for="parent name">
-        Parent Name
+        Parent's name
       </label>
       <input 
               className="mt-4 shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -289,7 +289,7 @@ function Academy(){
 
     <div className="mb-6">
       <label className="block text-gray-700 text-sm font-bold mb-2" for="student fullname">
-      Student's Fullname
+      Student's fullname
       </label>
 
       <input 
@@ -307,7 +307,7 @@ function Academy(){
 
     <div className="mb-6">
       <label className="block text-gray-700 text-sm font-bold mb-2" for="student phone">
-      Student phone
+      Student's phone
       </label>
 
       <input 
@@ -375,7 +375,7 @@ function Academy(){
 
     <div className="mb-6">
       <label className="block text-gray-700 text-sm font-bold mb-2" for="country">
-      country
+      Country
       </label>
       <select 
 
@@ -646,7 +646,7 @@ function Academy(){
 
     <div className="mb-6">
       <label className="block text-gray-700 text-sm font-bold mb-2" for="state">
-      state
+      State
       </label>
 
       <select
@@ -699,7 +699,7 @@ className='mt-4 shadow appearance-none border border-red-500 rounded w-full py-2
 
     <div className="mb-6">
       <label className="block text-gray-700 text-sm font-bold mb-2" for="courselevel">
-      courseLeve
+      Course level
       </label>
 
       <select
@@ -722,7 +722,7 @@ className='mt-4 shadow appearance-none border border-red-500 rounded w-full py-2
 
     <div className="mb-6">
       <label className="block text-gray-700 text-sm font-bold mb-2" for="courselevel">
-      courseLeve
+      Course of interest
       </label>
 
       <select
