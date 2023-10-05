@@ -7,6 +7,12 @@ import {db} from '../firebase'
 
 function Academy(){
 
+  const reload = ()=>{
+    setTimeout(()=>{
+      location.reload()
+
+    }, 2000)
+  }
   const[isFormVisible, setIsFormVisible]= useState(false)
   const toggleFormVisibility = ()=>{
     setIsFormVisible(!isFormVisible)
@@ -48,7 +54,7 @@ function Academy(){
   
     const Submit = async(e)=>{
      
-  
+        reload()
       e.preventDefault()
       if(ValidateForm()){
         // console.log('form submited', formData)
