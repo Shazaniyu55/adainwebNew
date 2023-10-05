@@ -11,7 +11,7 @@ function Academy(){
     setTimeout(()=>{
       location.reload()
 
-    }, 1000)
+    }, 2000)
   }
   const[isFormVisible, setIsFormVisible]= useState(false)
   const toggleFormVisibility = ()=>{
@@ -317,7 +317,7 @@ function Academy(){
               onChange={handleInputChange}
               type="text" 
               name='studentPhone'
-              placeholder="student fullname"/>
+              placeholder="student phone"/>
               <p>{errorMessage.studentPhone}</p>
 
     </div>
