@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
 import NightMode from '../components/NightMode'
-import NiyuThemeSwitch from '../components/themeSwitcher';
 import ProductCard from '../components/ProductCard'
 
 function Home(){
