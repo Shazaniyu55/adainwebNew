@@ -11,7 +11,7 @@ function Academy(){
     setTimeout(()=>{
       location.reload()
 
-    }, 2000)
+    }, 1000)
   }
   const[isFormVisible, setIsFormVisible]= useState(false)
   const toggleFormVisibility = ()=>{
@@ -219,8 +219,8 @@ function Academy(){
     return(
       <div>
         <AcademyCard />
-
-        <div className='flex justify-center items-center m-10'>
+        <div className='flex justify-center items-center m-10'><i>Click on this button to register with us</i></div>
+        <div className='flex justify-center items-center m-4'>
         <button onClick={toggleFormVisibility} className="mx-8 bg-adainyellow text-white px-4 py-2 rounded font-popins">
         {isFormVisible ? 'Hide form': 'Show form'}
 
@@ -761,7 +761,7 @@ className='mt-4 shadow appearance-none border border-red-500 rounded w-full py-2
 
       
     </div>
-  </form>
+                 </form>
             </div>
               
         )}
