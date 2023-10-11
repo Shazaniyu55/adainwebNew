@@ -13,9 +13,9 @@ const AcademyCard = () => {
           
             <div className=" rounded-lg p-6 hover:scale-40 transform transition-transform duration-300">
               <div className="mb-4 relative">
-              <Image src='/images/robotics.jpg'
+              <Image src='/images/black1.jpg'
               alt='academy'
-              className="rounded-lg w-full h-auto"
+              className="rounded-lg w-full h-80"
               width={200} height={100}/>
                 
                 {/* Gradient Effect */}
@@ -37,9 +37,9 @@ const AcademyCard = () => {
           <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
             <div className=" rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
               <div className="mb-4 relative">
-              <Image src='/images/robotics2.jpg'
+              <Image src='/images/black6.jpg'
               alt='academy'
-              className="rounded-lg w-full h-auto"
+              className="rounded-lg w-full h-80"
               width={200} height={50}/>
                 {/* Gradient Effect */}
                 <div
@@ -60,8 +60,8 @@ const AcademyCard = () => {
           <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
             <div className=" rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
               <div className="mb-4 relative">
-              <Image src='/images/robotics3.jpg'
-              className="rounded-lg w-full h-auto"
+              <Image src='/images/black9.jpg'
+              className="rounded-lg w-full h-80"
               alt='academy'
               width={200} height={100}/>
                 {/* Gradient Effect */}

@@ -5,8 +5,48 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaBars, FaCaretDown } from 'react-icons/fa';
 import NiyuThemeSwitch from './themeSwitcher';
+import {useDispatch, useSelector} from 'react-redux'
+import {login, logout, selectUser} from '../store/slice/userSlice'
+import {auth, onAuthStateChanged} from '../firebase'
+import Header from './Header';
 
 function AdainNavBar() {
+  const user = useSelector(selectUser)
+  const dispatch = useDispatch()
+
+  // check at page load if a user is authenticated
+
+  useEffect(()=>{
+    onAuthStateChanged(auth, (userAuth)=>{
+      if(userAuth) {
+        // user is logged in, send the user's details to redux, store the current user in the state
+        dispatch(
+          login(
+            {
+              email:userAuth.email,
+              uid:userAuth.uid,
+              displayName: userAuth.displayName,
+              photoUrl: userAuth.photoURL,
+            
+            }
+          )
+        )
+      }else{
+        dispatch(logout())
+      }
+
+    })
+    console.log('page loaded');
+
+  }, [])
+
+
+
+
+
+
+
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState('');
@@ -142,12 +182,22 @@ function AdainNavBar() {
                {/* I created a sign in button here to have an event listener of onclick 
                that it should listen to handle click function above 
               the parent codeblock... */}
+
+              {!user ? (
+                              <div className="md:text-adainblack hover:text-adainwhite  bg-adainyellow hover:bg-adainblack md:bg:hover-adainblack rounded-xl lg:m-8 p-1  w-42 shadow-md">
+                              <Link href="/SignIn" className="sm:px-10 text-sm pr-2 mr-4 text-lg  lg:my-20" onClick={() => handleClick('checkout')}>
+                                Sign in
+                              </Link>
+                            </div>
+              ): ( 
+                <div className="md:text-adainblack hover:text-adainwhite  bg-adainyellow hover:bg-adainblack md:bg:hover-adainblack rounded-xl lg:m-8 p-1  w-42 shadow-md">
+                <Link href="/SignIn" className="sm:px-10 text-sm pr-2 mr-4 text-lg  lg:my-20" onClick={() => handleClick('checkout')}>
+                  {user.displayName}
+                </Link>
+              </div>
+                ) }
                   
-                  <div className="md:text-adainblack hover:text-adainwhite  bg-adainyellow hover:bg-adainblack md:bg:hover-adainblack rounded-xl lg:m-8 p-1  w-42 shadow-md">
-    <Link href="/SignIn" className="sm:px-10 text-sm pr-2 mr-4 text-lg  lg:my-20" onClick={() => handleClick('checkout')}>
-      Sign in
-    </Link>
-  </div>
+    
     
     
 

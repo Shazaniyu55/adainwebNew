@@ -13,9 +13,9 @@ const JobCard = () => {
           
             <div className=" rounded-lg p-6 hover:scale-40 transform transition-transform duration-300">
               <div className="mb-4 relative">
-              <Image src='/images/team1.jfif'
+              <Image src='/images/black4.jpg'
               alt='team'
-              className="rounded-lg w-full h-auto"
+              className="rounded-lg w-full h-80"
               width={200} height={100}/>
                 
                 {/* Gradient Effect */}
@@ -39,8 +39,8 @@ const JobCard = () => {
           <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
             <div className=" rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
               <div className="mb-4 relative">
-              <Image src='/images/team2.jfif'
-              className="rounded-lg w-full h-auto"
+              <Image src='/images/black2.jpg'
+              className="rounded-lg w-full h-80"
               alt='team'
               width={200} height={100}/>
                 {/* Gradient Effect */}
@@ -63,8 +63,8 @@ const JobCard = () => {
           <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
             <div className=" rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
               <div className="mb-4 relative">
-              <Image src='/images/team3.jfif'
-              className="rounded-lg w-full h-auto"
+              <Image src='/images/black3.jpg'
+              className="rounded-lg w-full h-80"
               alt='team'
               width={200} height={100}/>
                 {/* Gradient Effect */}
@@ -87,8 +87,8 @@ const JobCard = () => {
            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
             <div className=" rounded-lg p-6 hover:scale-105 transform transition-transform duration-300">
               <div className="mb-4 relative">
-              <Image src='/images/team4.jfif'
-              className="rounded-lg w-full h-auto"
+              <Image src='/images/black5.jpg'
+              className="rounded-lg w-full h-80"
               alt='team'
               width={200} height={100}/>
                 {/* Gradient Effect */}

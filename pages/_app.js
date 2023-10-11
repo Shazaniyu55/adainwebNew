@@ -7,9 +7,13 @@ import { ThemeProvider } from 'next-themes';
 import AdainSpaceBackground from '../components/AdainSpaceBackground';
 import { Provider } from 'react-redux';
 import Store from '../store/store';
+
+
+
+
 function MyApp({ Component, pageProps }) {
   return (
-    <div className='dark:bg-black bg-purple-800 text-white'>
+    <div>
      <Provider store={Store}>
       <AdainSplashScreen />
       
@@ -17,11 +21,13 @@ function MyApp({ Component, pageProps }) {
         
       <ThemeProvider attribute='class' enableSystem={false}>
         
-        <Component {...pageProps} />
+      <Component {...pageProps} />
+       
         
         </ThemeProvider>
        
       </Layouts>
+      
       </Provider>
       
 

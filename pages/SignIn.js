@@ -1,85 +1,122 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-// import {UserAuth} from '../context/authContext'
+import {useDispatch, useSelector} from 'react-redux'
+import {login, logout, selectUser} from '../store/slice/userSlice'
+import {auth, onAuthStateChanged} from '../firebase'
+import Login from '../components/Login';
+import { Transition } from "@headlessui/react";
+import TopBar from '../components/TopBar';
+import SideBar from '../components/SideBar';
+import Header from '../components/Header';
+
+
+function SignIn({children}){
+
+  const [showNav, setShowNav] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  function handleResize() {
+    if (innerWidth <= 640) {
+      setShowNav(false);
+      setIsMobile(true);
+    } else {
+      setShowNav(true);
+      setIsMobile(false);
+    }
+  }
+
+  useEffect(() => {
+    if (typeof window != undefined) {
+      addEventListener("resize", handleResize);
+    }
+
+    return () => {
+      removeEventListener("resize", handleResize);
+    };
+  }, []);
 
 
 
-function SignIn(){
-  // const {user, googleSignIn, logOut} = UserAuth()
-
-  // const handleSignIn = async()=>{
-  //   try{
-  //     await googleSignIn()
-
-  //   }catch(error){
-  //     console.log(error)
-
-  //   }
-
-  // }
-
-  // const handleSignOut = async()=>{
-  //   try {
-  //     await logOut()
-  //   } catch (error) {
-  //     console.log(error)
-
-  //   }
-
-  // }
-
-  // console.log(user)
-    return(
-        <div className='flex justify-center items-center'>
-          
-
-<div className='flex justify-center items-center mt-10'>
-
-<div className="w-full max-w-xl">
-
-<form className="bg-white shadow-xl rounded px-8 pt-6 pb-8 mb-4">
-
-<div className="mb-6">
-<label className="block text-gray-700 text-sm font-bold mb-2" for="password">
-Email
-</label>
-<input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="email" placeholder="Email"/>
-
-</div>
-
-<div className="mb-6">
-      <label className="block text-gray-700 text-sm font-bold mb-2" for="password">
-        Password
-      </label>
-      <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
-
-      <div className="flex justify-end">
-      <p className="text-red-500 text-xs italic">Don`t have an account? <Link href='/SignUp' className='text-adainyellow'>sign up</Link></p>
-      </div>
-    </div>
-
-<div className="flex items-center justify-center">
-<button className="mx-8 bg-adainyellow text-white px-4 py-2 rounded" type="button">
-Login In
-</button>
 
 
-</div>
-</form>
 
+  const user = useSelector(selectUser)
+  const dispatch = useDispatch()
 
-<div className="elfsight-app-597fb779-735d-41ae-a417-35c199b9ebc6"></div>
+  // check at page load if a user is authenticated
 
-
-</div>
-    
-  
-
-</div>
+  useEffect(()=>{
+    onAuthStateChanged(auth, (userAuth)=>{
+      if(userAuth) {
+        // user is logged in, send the user's details to redux, store the current user in the state
+        dispatch(
+          login(
+            {
+              email:userAuth.email,
+              uid:userAuth.uid,
+              displayName: userAuth.displayName,
+              photoUrl: userAuth.photoURL,
             
-        </div>
-    )
+            }
+          )
+        )
+      }else{
+        dispatch(logout())
+      }
+
+    })
+    console.log('page loaded');
+
+  }, [])
+
+ 
+  return (
+    <div className='app'>
+     
+
+      {!user ? (
+        <Login />
+      ) : (
+        // <div className='flex justify-center items-center'>
+        //   <div>
+        //     <h1>Hello {user.displayName}!</h1>
+        //     <p>{user.email}</p>
+        //     <img src={user.photoUrl} alt='niyu'/>
+           
+        //   </div>
+        // </div>
+
+        <>
+        <Header/>
+      <TopBar showNav={showNav} setShowNav={setShowNav} />
+      <Transition
+        as={Fragment}
+        show={showNav}
+        enter="transform transition duration-[400ms]"
+        enterFrom="-translate-x-full"
+        enterTo="translate-x-0"
+        leave="transform duration-[400ms] transition ease-in-out"
+        leaveFrom="translate-x-0"
+        leaveTo="-translate-x-full"
+      >
+        <SideBar showNav={showNav} />
+      </Transition>
+      <main
+        className={`pt-16 transition-all duration-[400ms] ${
+          showNav && !isMobile ? "pl-56" : ""
+        }`}
+      >
+        <div className="px-4 md:px-16">{children}</div>
+      </main>
+    </>
+        
+        
+    
+      )}
+    </div>
+  ); 
+    
 
 }
 

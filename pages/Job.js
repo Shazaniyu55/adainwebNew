@@ -31,8 +31,8 @@ import JobCard from '../components/JobCard';
         <Fragment>
         
             <JobCard />
-            <div className='flex justify-center'>
-                        <button className='sm:relative top-10 text-adainwhite mx-8 bg-adainblack text-white px-4 py-2 rounded m-10' onClick={()=>{
+            <div className='flex justify-center p-4'>
+                        <button className='sm:relative top-10 text-adainwhite mx-8 bg-adainblack text-white px-4 py-2 rounded m-10 ' onClick={()=>{
                             setShowModal(true)
                         }}>Submit Resume</button>
 
