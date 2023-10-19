@@ -102,7 +102,7 @@ function Contact(){
             <div className='flex flex-col sm:flex-row  justify-between p-10 gap-10'>
                 <div className='flex justify-center items-center flex-col'>
                 
-                <Image className='' src='/images/phone.svg' width={50} height={50} />
+                <Image className='' src='/images/phone.svg' width={50} height={50} alt='phone'/>
                 <h1 className='text-sm font-monteserat'>Phone Number</h1>
                 <p className='text-sm font-popins'>(+234) 908-260-3201</p>
 
@@ -110,7 +110,7 @@ function Contact(){
 
                 <div className='flex justify-center items-center flex-col'>
                 
-                <Image className=''  src='/images/office.svg' width={50} height={50} />
+                <Image className=''  src='/images/office.svg' width={50} height={50} alt='office'/>
                 <h1 className=' text-sm font-monteserat'>Head office</h1>
                 <p className='text-sm font-popins'>First floor, Sky Blue Building beside Beam clinic,
                          Along Aso B Mararaba Road, Nasarawa State</p>
@@ -121,7 +121,7 @@ function Contact(){
 
                 <div className='flex justify-center items-center flex-col'>
                 
-                <Image className='' src='/images/email.svg' width={50} height={50} />
+                <Image className='' src='/images/email.svg' width={50} height={50} alt='email'/>
 
                 <h1 className='text-sm font-monteserat'>Email address</h1>
                 <p className='text-sm font-popins'>Info@adain.ng</p>
@@ -200,7 +200,7 @@ function Contact(){
                 
 
             </div>
-            <div className="elfsight-app-597fb779-735d-41ae-a417-35c199b9ebc6"></div>
+            
             </Fragment>
 
         

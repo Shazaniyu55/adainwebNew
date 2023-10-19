@@ -11,34 +11,34 @@ import {auth, onAuthStateChanged} from '../firebase'
 import Header from './Header';
 
 function AdainNavBar() {
-  const user = useSelector(selectUser)
-  const dispatch = useDispatch()
+  // const user = useSelector(selectUser)
+  // const dispatch = useDispatch()
 
   // check at page load if a user is authenticated
 
-  useEffect(()=>{
-    onAuthStateChanged(auth, (userAuth)=>{
-      if(userAuth) {
-        // user is logged in, send the user's details to redux, store the current user in the state
-        dispatch(
-          login(
-            {
-              email:userAuth.email,
-              uid:userAuth.uid,
-              displayName: userAuth.displayName,
-              photoUrl: userAuth.photoURL,
+  // useEffect(()=>{
+  //   onAuthStateChanged(auth, (userAuth)=>{
+  //     if(userAuth) {
+  //       // user is logged in, send the user's details to redux, store the current user in the state
+  //       dispatch(
+  //         login(
+  //           {
+  //             email:userAuth.email,
+  //             uid:userAuth.uid,
+  //             displayName: userAuth.displayName,
+  //             photoUrl: userAuth.photoURL,
             
-            }
-          )
-        )
-      }else{
-        dispatch(logout())
-      }
+  //           }
+  //         )
+  //       )
+  //     }else{
+  //       dispatch(logout())
+  //     }
 
-    })
-    console.log('page loaded');
+  //   })
+  //   console.log('page loaded');
 
-  }, [])
+  // }, [])
 
 
 
@@ -86,7 +86,7 @@ function AdainNavBar() {
                 <button className="text-adainblack hover:text-adainwhite pt-2 rounded-md" onClick={handleClick}>
                   {navbar ? (
                     <svg className="text-adainblack hover:text-adainwhite icon icon-tabler icon-tabler-letter-x" fill="none" height="24" stroke="currentColor" 
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" 
+                    strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24" 
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0h24v24H0z" fill="none" stroke="none"/>
                     <line x1="7" x2="17" y1="4" y2="20"/>
@@ -183,19 +183,15 @@ function AdainNavBar() {
                that it should listen to handle click function above 
               the parent codeblock... */}
 
-              {!user ? (
+              
                               <div className="md:text-adainblack hover:text-adainwhite  bg-adainyellow hover:bg-adainblack md:bg:hover-adainblack rounded-xl lg:m-8 p-1  w-42 shadow-md">
                               <Link href="/SignIn" className="sm:px-10 text-sm pr-2 mr-4 text-lg  lg:my-20" onClick={() => handleClick('checkout')}>
                                 Sign in
                               </Link>
                             </div>
-              ): ( 
-                <div className="md:text-adainblack hover:text-adainwhite  bg-adainyellow hover:bg-adainblack md:bg:hover-adainblack rounded-xl lg:m-8 p-1  w-42 shadow-md">
-                <Link href="/SignIn" className="sm:px-10 text-sm pr-2 mr-4 text-lg  lg:my-20" onClick={() => handleClick('checkout')}>
-                  {user.displayName}
-                </Link>
-              </div>
-                ) }
+            
+                
+                
                   
     
     

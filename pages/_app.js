@@ -14,7 +14,7 @@ import Store from '../store/store';
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-     <Provider store={Store}>
+    //  <Provider store={Store}>
       <AdainSplashScreen />
       
       <Layouts showNavbarAndFooter={true}>
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
        
       </Layouts>
       
-      </Provider>
+      // </Provider>
       
 
       
